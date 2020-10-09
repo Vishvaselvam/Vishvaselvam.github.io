@@ -1,0 +1,455 @@
+
+/* variable */
+:root{
+    --primary:#f4f7f7;
+    --secondary:#373a40;
+}
+/*reset */
+li{
+    list-style-type: none;
+}
+body,p,ul,li,a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* base styles */
+body{
+    background-color: var(--primary);
+    overflow-x: hidden;
+}
+
+/* fonts  */
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary);
+    font-weight: bold;
+}
+p,a,li{
+    color: #686d76;
+}
+*{
+    font-family: 'Rubik', sans-serif;
+}
+.first-heading{
+    font-family: 'Sacramento', cursive;
+    font-weight: lighter;
+}
+h1{
+    font-size: 1.8em;
+}
+h3{
+    font-size: 1.3em;
+}
+h2{
+    font-size: 1.5em;
+}
+h4{
+    font-size: 1.2em;
+}
+h5,h6{
+    font-size: 1.1em ;
+}
+p{
+    font-size: 1em;
+}
+
+/*mobile styles */
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-gap:1rem;
+}
+.site-nav{
+    display: none;
+    
+}
+.header{
+    padding: 80px 0;
+    background-repeat: no-repeat;
+    background-size: 500px 300px;
+    background-image: url(./public/vishva.jpg);   
+}
+.header h1{
+   position: relative;
+   left: 8em;
+   font-size: 2.5rem;
+}
+.header p{
+  font-weight: bold;
+  position: relative;
+  left: 18em;
+  bottom: 2em;
+}
+#About{
+    padding:  20px 40px; 
+}
+#About h1{
+    text-align: center;
+}
+#About i{
+    font-size: 2em;
+    color: #19d3da;
+    margin-top: 1rem;
+}
+.details,.objective,.Education{
+    grid-column: 1/9;
+    background: #ebecf1;
+}
+.abouth4{
+    color:  #19d3da;
+    margin-top: 0.7rem;
+}
+
+.details-div{
+    text-align: center;
+}
+.details-h5{
+    padding-left: 3rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+.details-p{
+    padding-left: 6rem ;
+    padding-bottom: 1rem;
+}
+.objective p{
+    padding-left: 3rem;
+    padding-right: 1rem;
+}
+.Education p{
+    padding-left: 6rem;
+}
+.Education p:nth-of-type(even){
+    font-weight: bold;
+}
+.skills div{
+    border: 2px solid#eeeeee;
+   border-radius: 10px; 
+}
+#Skills{
+    padding: 20px 40px;
+}
+#Skills h1{
+    text-align: center;
+}
+.skills{
+    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1rem;
+}
+.skills div{
+    background: #fff;
+    text-align: center;
+}
+.skills div i{
+    font-size: 4rem;
+    padding: 1rem 1rem 0 1rem;
+}
+.skills div p{
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+#Projects{
+    padding: 20px 20px;
+}
+#Projects h1{
+    text-align: center;
+}
+
+.gridd{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-gap: 1rem;
+}
+.link1,.link2,.link3{
+    grid-column: 1/9;
+    position: relative;
+    width: 450px;
+    margin: 0.5rem 0;
+}
+.projects img{
+    width: 100%;
+    display: block;
+}
+.image_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #19d3da;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.image_overlay:hover{
+ opacity: 0.9;
+}
+.image_overlay > *{
+    transform: translateY(25px);
+    transition: transform 0.25s;
+}
+.image_overlay:hover > *{
+    transform: translateY(0);
+    
+}
+.image_title{
+    font-size: 1.5em;
+   font-weight: bold;
+   margin-top: -1em;
+   
+}
+.image_desc{
+    font-size: 1em;
+    margin-top: -1.5em;
+}
+
+.github{
+  display: inline-block;
+  margin-top: 2rem;
+  margin-left: 8rem;
+  border: 2px solid #373a40;
+  padding: 0.7rem;
+  border-radius: 20px;
+  transition: 0.25s ease;
+}
+.github:hover{
+    background: #373a40;
+    color: eeeeee;
+}
+#Contact{
+    background: #373a40;
+    padding: 1em;
+}
+#Contact h1{
+    padding: 1rem;
+    text-align: center;
+    color: #eeeeee;  
+}
+#Contact p{
+    grid-column: 1/5;
+    padding: 1rem;
+    color: #eeeeee;
+}
+#Contact .grid div{
+    font-size: 23px;
+    grid-column: 7/9;
+   padding-top: 1rem;
+}
+#Contact .grid div a{
+    padding: 0 4px;
+    color: #fff
+}
+
+
+
+
+@media screen and (min-width:620px){
+
+    .header{
+        padding: 100px 0;
+        background-size: 550px 400px;
+    }
+    .header h1{
+        position: relative;
+        left: 8em;
+        bottom: 1em;
+        font-size: 3rem; 
+     }
+     .header p{
+        left: 19em;
+        bottom: 4em;
+        font-size: 1.2em;
+      }
+      .details,.objective,.Education{
+          padding: 1rem;
+          font-size: 1.1em;
+      }
+      .link1,.link2,.link3{
+        grid-column: 2/9;
+        width: 470px;
+    }
+    .github{
+        margin-top: 3rem;
+        margin-left: 13rem;
+    }
+    #Contact{
+        padding: 0 1em 1em 0;
+    }
+}
+
+@media screen and (min-width:960px){
+     body{
+         font-size: 18px;
+     }
+     .header{
+        height: 60%;
+        background-size: 720px 580px;
+    }
+    .header h1{
+        left: 8.5em;
+        bottom: -0.5em;
+        font-size: 4rem; 
+       
+     }
+     .header p{
+        left: 19.5em;
+        bottom: 1em;
+        font-size: 1.5em;
+      }
+     #About{
+         margin: 0 1rem;
+     }
+      #About h1{
+        font-size: 2em;
+    }
+    .details{
+        grid-column: 1/5;
+    }
+    .objective{
+        grid-column: 5/9;
+    }
+    .Education{
+        grid-column: 2/8;
+        grid-row: 2/5;
+     
+    }
+    .objective p{
+        padding-left: 2rem;
+    }
+    .skills{
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+  
+    #Skills{
+       margin-right: 2.5rem;
+    }
+    .link1{
+        grid-column: 1/4;
+        grid-row: 1/5;
+    }
+    .link2{
+        grid-column: 5/9;
+        grid-row: 1/5;
+    }
+    .link3{
+        grid-column: 3/8;
+        grid-row: 5/9;
+    }
+    .github{
+        margin-left: 22rem;
+    }
+    #Contact p{
+        grid-column: 1/6;
+    }
+    #Contact .grid div{
+        grid-column: 8/9;
+        padding: 1rem 0rem;
+    }
+}
+
+@media screen and (min-width:1200px){
+   body{
+       font-size: -2em;
+   }
+  .header{
+    height: 70%;
+    background-size: 750px 600px;
+    background-image: url(./public/vishvad.jpg);
+   }
+   .header h1{
+    left: 7.5em;
+    font-size: 6rem; 
+ }
+ .header p{
+    left: 19.5em;
+    bottom: 1em;
+    font-size: 2em;
+  }
+  .grid{
+    grid-template-columns: repeat(12,1fr);
+}
+  #About{
+      margin:1rem;
+  }
+  .details{
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+.objective{
+    grid-column: 5/9;
+    grid-row: 1/2;
+}
+.Education{
+    grid-column: 9/13;
+    grid-row: 1/2;
+}
+.gridd{
+    grid-template-columns: repeat(12,1fr);
+}
+.link1{
+    width: 400px;
+    margin: 1rem 0;
+}
+.link2{
+    width: 400px;
+    margin: 1rem 0;
+}
+.link3{
+    grid-row: 1/5;
+    grid-column: 9/13;
+    width: 400px;
+    margin: 1rem 0;
+}
+#Projects{
+  margin: 2rem 0;
+}
+#Projects h1{
+    padding-bottom: 1rem;
+}
+.github{
+    margin-left: 32rem;
+}
+#Contact p{
+    grid-column: 1/7;
+    
+}
+#Contact .grid div{
+    grid-column: 11/13;
+    padding: 1rem 0rem;
+}
+#Contact .grid div a{
+    padding: 0 0.7rem;
+}
+ul{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+.grid ul{
+    grid-column: 7/13;
+    margin-top: -3em;
+}
+.grid ul a{
+    padding: 0 2rem;
+    color: #dddddd;
+    font-size: 1.1em;
+}
+.grid ul a:hover{
+  color: #aaaaaa;
+}
+
+}
+
+/**** nandri vanakam ****/
